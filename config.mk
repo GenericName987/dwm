@@ -28,7 +28,7 @@ FREETYPEINC = /usr/include/freetype2
 # OpenBSD - Uncomment this for the swallow patch / SWALLOW_PATCH
 #KVMLIB = -lkvm
 
-# Uncomment this for the alpha patch and the winicon patch (BAR_ALPHA_PATCH, BAR_WINICON_PATCH)
+#Uncomment this for the alpha patch and the winicon patch (BAR_ALPHA_PATCH, BAR_WINICON_PATCH)
 XRENDER = -lXrender
 
 # Uncomment this for the mdpcontrol patch / MDPCONTROL_PATCH
@@ -43,7 +43,7 @@ XRENDER = -lXrender
 #YAJLINC = -I/usr/include/yajl
 
 # Uncomment this for the rounded corners patch / ROUNDED_CORNERS_PATCH
-#XEXTLIB = -lXext
+XEXTLIB = -lXext
 
 # Uncomment this for the swallow patch / SWALLOW_PATCH
 XCBLIBS = -lX11-xcb -lxcb -lxcb-res

@@ -5,7 +5,7 @@
 static const unsigned int borderpx       = 0;   /* border pixel of windows */
 static const int corner_radius           = 10;
 #else
-static const unsigned int borderpx       = 1;   /* border pixel of windows */
+static const unsigned int borderpx       = 0;   /* border pixel of windows */
 #endif // ROUNDED_CORNERS_PATCH
 #if BAR_BORDER_PATCH
 /* This allows the bar border size to be explicitly set separately from borderpx.
@@ -162,51 +162,51 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #if BAR_PANGO_PATCH
 static const char font[]                 = "ttf-mononoki 10";
 #else
-static const char *fonts[]               = { "ttf-mononoki:size=10" };
+static const char *fonts[]               = { "ttf-mononoki:size=16", "Font Awesome 6 Free,Font Awesome 6 Free Regular:size=16:antialias=true" };
 #endif // BAR_PANGO_PATCH
 static const char dmenufont[]            = "ttf-mononoki:size=10";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
 static char normfgcolor[]                = "#bbbbbb";
-static char normbgcolor[]                = "#646464";
+static char normbgcolor[]                = "#CFCFCF";
 static char normbordercolor[]            = "#444444";
-static char normfloatcolor[]             = "#db8fd9";
+static char normfloatcolor[]             = "#242424";
 
 static char selfgcolor[]                 = "#eeeeee";
-static char selbgcolor[]                 = "#5808ff";
-static char selbordercolor[]             = "#5808ff";
-static char selfloatcolor[]              = "#5808ff";
+static char selbgcolor[]                 = "#242424";
+static char selbordercolor[]             = "#242424";
+static char selfloatcolor[]              = "#242424";
 
 static char titlenormfgcolor[]           = "#bbbbbb";
-static char titlenormbgcolor[]           = "#646464";
+static char titlenormbgcolor[]           = "#CFCFCF";
 static char titlenormbordercolor[]       = "#444444";
-static char titlenormfloatcolor[]        = "#db8fd9";
+static char titlenormfloatcolor[]        = "#242424";
 
 static char titleselfgcolor[]            = "#eeeeee";
-static char titleselbgcolor[]            = "#5808ff";
-static char titleselbordercolor[]        = "#5808ff";
-static char titleselfloatcolor[]         = "#5808ff";
+static char titleselbgcolor[]            = "#242424";
+static char titleselbordercolor[]        = "#242424";
+static char titleselfloatcolor[]         = "#242424";
 
-static char tagsnormfgcolor[]            = "#bbbbbb";
-static char tagsnormbgcolor[]            = "#646464";
+static char tagsnormfgcolor[]            = "#444444";
+static char tagsnormbgcolor[]            = "#CFCFCF";
 static char tagsnormbordercolor[]        = "#444444";
-static char tagsnormfloatcolor[]         = "#db8fd9";
+static char tagsnormfloatcolor[]         = "#242424";
 
 static char tagsselfgcolor[]             = "#eeeeee";
-static char tagsselbgcolor[]             = "#5808ff";
-static char tagsselbordercolor[]         = "#5808ff";
-static char tagsselfloatcolor[]          = "#5808ff";
+static char tagsselbgcolor[]             = "#242424";
+static char tagsselbordercolor[]         = "#242424";
+static char tagsselfloatcolor[]          = "#242424";
 
-static char hidnormfgcolor[]             = "#5808ff";
+static char hidnormfgcolor[]             = "#242424";
 static char hidselfgcolor[]              = "#227799";
-static char hidnormbgcolor[]             = "#646464";
-static char hidselbgcolor[]              = "#646464";
+static char hidnormbgcolor[]             = "#CFCFCF";
+static char hidselbgcolor[]              = "#CFCFCF";
 
 static char urgfgcolor[]                 = "#bbbbbb";
-static char urgbgcolor[]                 = "#646464";
+static char urgbgcolor[]                 = "#CFCFCF";
 static char urgbordercolor[]             = "#ff0000";
-static char urgfloatcolor[]              = "#db8fd9";
+static char urgfloatcolor[]              = "#242424";
 
 #if RENAMED_SCRATCHPADS_PATCH
 static char scratchselfgcolor[]          = "#FFF7D4";
@@ -257,7 +257,7 @@ static char selfloatbgcolor[]            = "#117799";
 #endif // BAR_FLEXWINTITLE_PATCH
 
 #if BAR_ALPHA_PATCH
-static const unsigned int baralpha = 0xd0;
+static const unsigned int baralpha = 75;
 static const unsigned int borderalpha = OPAQUE;
 static const unsigned int alphas[][3] = {
 	/*                       fg      bg        border     */
@@ -449,7 +449,7 @@ static char tagicons[][NUMTAGS][MAX_TAGLEN] =
 static char *tagicons[][NUMTAGS] =
 #endif // NAMETAG_PATCH
 {
-	[DEFAULT_TAGS]        = { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
+	[DEFAULT_TAGS]        = { "", "", "", "", "5", "6", "7", "8", "" },
 	[ALTERNATIVE_TAGS]    = { "A", "B", "C", "D", "E", "F", "G", "H", "I" },
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };
